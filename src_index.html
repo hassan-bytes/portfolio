@@ -2467,9 +2467,10 @@
 
       /* About Section: 1 Card per row for Roles */
       .role-cards-grid {
-        grid-template-columns: 1fr;
-        gap: 14px;
-        width: 100%;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+        width: 100% !important;
         margin-bottom: 24px;
       }
 
@@ -2477,6 +2478,8 @@
         padding: 22px 18px;
         border-radius: var(--radius-md);
         min-width: 0;
+        width: 100%;
+        box-sizing: border-box;
       }
 
       .role-icon-box {
@@ -2534,15 +2537,18 @@
 
       /* Core Capabilities: 1 Card per row */
       .capabilities-grid {
-        grid-template-columns: 1fr;
-        gap: 14px;
-        width: 100%;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+        width: 100% !important;
       }
 
       .capability-card {
         padding: 22px 18px;
         border-radius: var(--radius-md);
         min-width: 0;
+        width: 100%;
+        box-sizing: border-box;
       }
 
       .cap-icon-box {
@@ -2582,9 +2588,10 @@
       }
 
       .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-        width: 100%;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        width: 100% !important;
       }
 
       .project-card {
