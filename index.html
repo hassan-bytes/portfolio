@@ -2210,10 +2210,43 @@
     }
 
     /* ========================================================
-       RESPONSIVENESS & SPECIAL MOBILE 2-CARDS-AT-A-TIME VIEW
+       SMOOTH SCROLL SLIDE & REVEAL ANIMATIONS
        ======================================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Staggered card reveals */
+    .projects-grid .project-card:nth-child(1) { transition-delay: 0.04s; }
+    .projects-grid .project-card:nth-child(2) { transition-delay: 0.09s; }
+    .projects-grid .project-card:nth-child(3) { transition-delay: 0.14s; }
+    .projects-grid .project-card:nth-child(4) { transition-delay: 0.19s; }
+    .projects-grid .project-card:nth-child(5) { transition-delay: 0.24s; }
+    .projects-grid .project-card:nth-child(6) { transition-delay: 0.29s; }
+
+    .capabilities-grid .capability-card:nth-child(1) { transition-delay: 0.04s; }
+    .capabilities-grid .capability-card:nth-child(2) { transition-delay: 0.09s; }
+    .capabilities-grid .capability-card:nth-child(3) { transition-delay: 0.14s; }
+    .capabilities-grid .capability-card:nth-child(4) { transition-delay: 0.19s; }
+
+    .role-cards-grid .role-overview-card:nth-child(1) { transition-delay: 0.04s; }
+    .role-cards-grid .role-overview-card:nth-child(2) { transition-delay: 0.09s; }
+    .role-cards-grid .role-overview-card:nth-child(3) { transition-delay: 0.14s; }
+    .role-cards-grid .role-overview-card:nth-child(4) { transition-delay: 0.19s; }
+
+    .edu-grid .edu-card:nth-child(1) { transition-delay: 0.04s; }
+    .edu-grid .edu-card:nth-child(2) { transition-delay: 0.10s; }
+
     /* ========================================================
-       RESPONSIVENESS & SPECIAL MOBILE 2-CARDS-AT-A-TIME VIEW
+       RESPONSIVENESS (1-Card Full Width on Mobile with Slide Animations)
        ======================================================== */
     @media (max-width: 1024px) {
       .hero-grid {
@@ -2242,7 +2275,7 @@
 
       .capabilities-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
+        gap: 16px;
       }
 
       .timeline-item {
@@ -2270,7 +2303,7 @@
         font-size: 1.05rem;
       }
 
-      /* Mobile Hero: Clean, Impactful Intro */
+      /* Mobile Hero */
       .hero {
         padding: 85px 0 45px;
         min-height: auto;
@@ -2278,33 +2311,33 @@
       }
 
       .hero-title {
-        font-size: clamp(1.65rem, 6.5vw, 2.15rem);
-        line-height: 1.18;
+        font-size: clamp(1.75rem, 7vw, 2.3rem);
+        line-height: 1.2;
         word-break: break-word;
         overflow-wrap: break-word;
       }
 
       .hero-lead {
-        font-size: 0.92rem;
-        line-height: 1.55;
+        font-size: 0.95rem;
+        line-height: 1.6;
         margin-bottom: 20px;
       }
 
       .hero-pills {
         display: flex;
-        gap: 6px;
+        gap: 8px;
         flex-wrap: wrap;
         margin-bottom: 22px;
       }
 
       .hero-pills .tag-chip {
-        font-size: 0.68rem;
-        padding: 3px 8px;
+        font-size: 0.72rem;
+        padding: 4px 10px;
       }
 
       .hero-actions-container {
         width: 100%;
-        gap: 10px;
+        gap: 12px;
         margin-bottom: 24px;
       }
 
@@ -2312,61 +2345,60 @@
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 8px;
+        gap: 10px;
       }
 
       .hero-main-actions .btn {
         width: 100%;
-        padding: 9px 8px;
-        font-size: 0.78rem;
+        padding: 11px 12px;
+        font-size: 0.85rem;
         justify-content: center;
         white-space: nowrap;
       }
 
       .hero-social-actions {
         display: flex;
-        gap: 6px;
+        gap: 8px;
         width: 100%;
         flex-wrap: wrap;
       }
 
       .hero-social-actions .btn-social {
-        padding: 7px 10px;
-        font-size: 0.75rem;
+        padding: 9px 14px;
+        font-size: 0.8rem;
         flex: 1 1 auto;
         justify-content: center;
       }
 
-      /* Mobile: 2 Cards at a time for Stats */
       .hero-stats-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
+        gap: 10px;
         width: 100%;
         padding-top: 20px;
       }
 
       .stat-card {
-        padding: 10px 10px;
+        padding: 14px 12px;
         min-width: 0;
       }
 
       .stat-num {
-        font-size: 1.25rem;
+        font-size: 1.4rem;
       }
 
       .stat-label {
-        font-size: 0.68rem;
+        font-size: 0.72rem;
       }
 
       .hero-stage {
         order: 2;
         width: 100%;
-        margin-top: 8px;
+        margin-top: 12px;
         overflow: hidden;
       }
 
       .developer-card {
-        max-width: 300px;
+        max-width: 320px;
         margin: 0 auto;
       }
 
@@ -2375,270 +2407,303 @@
       }
 
       .dev-card-footer {
-        padding: 12px 14px;
+        padding: 14px 16px;
       }
 
       .dev-card-name {
-        font-size: 0.98rem;
+        font-size: 1.05rem;
       }
 
       .dev-card-role {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
       }
 
       .dev-card-location {
-        font-size: 0.64rem;
-        padding: 3px 7px;
+        font-size: 0.7rem;
+        padding: 4px 8px;
       }
 
-      /* About Section */
+      /* About Section: 1 Card per row for Roles */
       .role-cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
+        grid-template-columns: 1fr;
+        gap: 14px;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 24px;
       }
 
       .role-overview-card {
-        padding: 14px 10px;
+        padding: 22px 18px;
         border-radius: var(--radius-md);
         min-width: 0;
       }
 
       .role-icon-box {
-        width: 32px;
-        height: 32px;
-        margin-bottom: 10px;
+        width: 38px;
+        height: 38px;
+        margin-bottom: 12px;
       }
 
       .role-card-title {
-        font-size: 0.88rem;
+        font-size: 1.05rem;
       }
 
       .role-card-desc {
-        font-size: 0.72rem;
-        margin-bottom: 8px;
-        line-height: 1.4;
+        font-size: 0.85rem;
+        margin-bottom: 10px;
+        line-height: 1.5;
       }
 
       .role-card-badge {
-        font-size: 0.62rem;
-        padding: 2px 6px;
+        font-size: 0.7rem;
+        padding: 3px 8px;
       }
 
       .about-card {
-        padding: 20px 14px;
+        padding: 24px 18px;
         width: 100%;
         box-sizing: border-box;
       }
 
       .about-text p {
-        font-size: 0.9rem;
-        line-height: 1.55;
-        margin-bottom: 14px;
+        font-size: 0.95rem;
+        line-height: 1.65;
+        margin-bottom: 16px;
       }
 
       .about-highlights {
         grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
+        gap: 10px;
         width: 100%;
       }
 
       .highlight-item {
-        padding: 10px 8px;
+        padding: 14px 12px;
         min-width: 0;
       }
 
       .highlight-label {
-        font-size: 0.64rem;
+        font-size: 0.68rem;
       }
 
       .highlight-value {
-        font-size: 0.78rem;
+        font-size: 0.85rem;
         word-break: break-word;
       }
 
-
-
-      /* Mobile: 2 Cards at a time for Capabilities */
+      /* Core Capabilities: 1 Card per row */
       .capabilities-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
+        grid-template-columns: 1fr;
+        gap: 14px;
         width: 100%;
       }
 
       .capability-card {
-        padding: 14px 10px;
+        padding: 22px 18px;
         border-radius: var(--radius-md);
         min-width: 0;
       }
 
       .cap-icon-box {
-        width: 32px;
-        height: 32px;
-        margin-bottom: 10px;
+        width: 38px;
+        height: 38px;
+        margin-bottom: 12px;
       }
 
       .cap-title {
-        font-size: 0.88rem;
+        font-size: 1.08rem;
       }
 
       .cap-desc {
-        font-size: 0.72rem;
-        margin-bottom: 8px;
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+        line-height: 1.5;
       }
 
       .cap-skills-list li {
-        font-size: 0.68rem;
-        padding: 2px 0;
-        word-break: break-word;
+        font-size: 0.78rem;
+        padding: 4px 0;
       }
 
-      /* Mobile: 2 Cards at a time for Selected Projects! */
-      .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
+      /* Projects: 1 Card per row on Mobile */
+      .filter-tabs {
         gap: 8px;
+        margin-bottom: 24px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .filter-btn {
+        padding: 7px 14px;
+        font-size: 0.78rem;
+        white-space: nowrap;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
         width: 100%;
       }
 
       .project-card {
         padding: 0;
-        border-radius: var(--radius-md);
+        border-radius: var(--radius-lg);
         min-width: 0;
-      }
-
-      .project-image-wrap {
-        aspect-ratio: 16 / 9.5;
-      }
-
-      .project-card-body {
-        padding: 12px 10px;
-      }
-
-      .project-title {
-        font-size: 0.84rem;
-        margin-bottom: 5px;
-        line-height: 1.25;
-      }
-
-      .project-desc {
-        font-size: 0.7rem;
-        line-height: 1.35;
-        margin-bottom: 8px;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
         overflow: hidden;
       }
 
+      .project-image-wrap {
+        aspect-ratio: 16 / 9.2;
+      }
+
+      .project-card-body {
+        padding: 20px 18px;
+      }
+
+      .project-title {
+        font-size: 1.08rem;
+        margin-bottom: 8px;
+        line-height: 1.35;
+      }
+
+      .project-desc {
+        font-size: 0.85rem;
+        line-height: 1.55;
+        margin-bottom: 12px;
+        display: block;
+        -webkit-line-clamp: unset;
+      }
+
       .project-highlights {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 14px;
+        list-style: none;
       }
 
-      .project-tags {
-        gap: 4px;
-        padding-top: 8px;
-        margin-bottom: 10px;
-      }
-
-      .project-tags .tag-chip {
-        font-size: 0.6rem;
-        padding: 2px 5px;
-      }
-
-      .project-card-actions {
+      .project-highlights li {
+        font-size: 0.78rem;
+        color: var(--text-dim);
+        display: flex;
+        align-items: center;
         gap: 6px;
       }
 
+      .project-highlights li::before {
+        content: '▹';
+        color: var(--accent-cyan);
+      }
+
+      .project-tags {
+        gap: 6px;
+        padding-top: 10px;
+        margin-bottom: 14px;
+        flex-wrap: wrap;
+      }
+
+      .project-tags .tag-chip {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+      }
+
+      .project-card-actions {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
       .btn-project-cta {
-        padding: 6px 10px;
-        font-size: 0.68rem;
-        gap: 4px;
+        padding: 8px 14px;
+        font-size: 0.8rem;
+        gap: 6px;
+        flex: 1 1 auto;
+        justify-content: center;
       }
 
       .video-play-pill {
-        width: 22px;
-        height: 22px;
-        bottom: 6px;
-        right: 6px;
+        width: 32px;
+        height: 32px;
+        bottom: 10px;
+        right: 10px;
       }
 
       .video-play-pill .icon-svg {
-        width: 8px;
-        height: 8px;
+        width: 11px;
+        height: 11px;
       }
 
       .project-brand-logo {
-        width: 22px;
-        height: 22px;
-        border-radius: 5px;
-        padding: 1px;
+        width: 28px;
+        height: 28px;
+        border-radius: 6px;
+        padding: 2px;
       }
 
-      /* Mobile: 2 Cards at a time for Education */
+      /* Education: 1 Card per row */
       .edu-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
+        grid-template-columns: 1fr;
+        gap: 14px;
         width: 100%;
       }
 
       .edu-card {
-        padding: 14px 10px;
+        padding: 20px 18px;
         min-width: 0;
       }
 
       .edu-degree {
-        font-size: 0.88rem;
+        font-size: 1.05rem;
       }
 
       .edu-institute {
-        font-size: 0.72rem;
+        font-size: 0.82rem;
       }
 
       /* Experience Timeline */
       .timeline-card {
-        padding: 18px 14px;
+        padding: 22px 18px;
       }
 
       .timeline-role {
-        font-size: 1.05rem;
+        font-size: 1.1rem;
       }
 
       .timeline-bullets li {
-        font-size: 0.8rem;
-        line-height: 1.5;
+        font-size: 0.84rem;
+        line-height: 1.55;
       }
 
       /* Contact Section */
       .contact-card {
-        padding: 32px 14px;
+        padding: 36px 18px;
         width: 100%;
         box-sizing: border-box;
       }
 
       .contact-title {
-        font-size: 1.55rem;
+        font-size: 1.65rem;
       }
 
       .contact-subtitle {
-        font-size: 0.88rem;
+        font-size: 0.92rem;
       }
 
       .contact-buttons-row {
         flex-direction: column;
         width: 100%;
-        gap: 8px;
+        gap: 10px;
       }
 
       .contact-buttons-row .btn-social {
         width: 100%;
         justify-content: center;
-        padding: 11px 14px;
-        font-size: 0.85rem;
+        padding: 12px 16px;
+        font-size: 0.9rem;
       }
 
       .resume-banner {
-        padding: 20px 14px;
+        padding: 24px 18px;
         width: 100%;
         box-sizing: border-box;
       }
