@@ -1,0 +1,14 @@
+# Archive & Unused Assets
+archive_unused_files/
+.jetro/
+data/
+
+# Old heavy uncompressed video files
+videos/fitpulse.mp4
+videos/saysavor.webm
+
+# IDE & OS files
+.DS_Store
+Thumbs.db
+node_modules/
+.vscode/

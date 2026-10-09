@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "jetro": {
+      "type": "stdio",
+      "command": "C:\\Users\\MUJEEB-UL-HASSAN\\.jetro\\runtime\\node-win32-x64.exe",
+      "args": [
+        "C:\\Users\\MUJEEB-UL-HASSAN\\.jetro\\mcp-server\\index.js"
+      ],
+      "env": {
+        "JET_WORKSPACE": "e:\\My portfolio",
+        "JET_API_URL": "https://api.jetro.ai",
+        "PATH": "C:\\Users\\MUJEEB-UL-HASSAN\\.jetro\\runtime;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\src;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Android\\Sdk\\cmdline-tools;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Android\\Sdk\\cmdline-tools\\latest;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Android\\Sdk\\cmdline-tools\\latest\\bin;C:\\Program Files\\Java\\jdk-17\\bin;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Android\\Sdk;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Android\\Sdk\\cmdline-tools\\latest\\bin;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Pub\\Cache\\bin;c:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Git;C:\\Program Files\\Java\\jdk-17\\bin;C:\\Program Files\\Java\\jdk-17\\bin;E:\\scrcpy;E:\\scrcpy\\scrcpy-win64-v3.3.3;E:\\ffmpeg-2025-10-19-git-dc39a576ad-full_build\\ffmpeg-2025-10-19-git-dc39a576ad-full_build\\bin;E:\\flutter_windows_3.32.0-stable\\flutter;E:\\flutter_windows_3.32.0-stable\\flutter\\bin;C:\\ktlint-1.8.0\\bin\\ktlint.jar;C:\\msys64\\mingw64\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Programs\\Python\\Python310\\;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Programs\\Python\\Python311\\;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Programs\\Antigravity\\bin;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Muse Hub\\lib;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Roaming\\npm;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Programs\\Windsurf\\bin;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Programs\\Ollama;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Python\\bin;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Programs\\Antigravity IDE\\bin;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Android\\Sdk\\cmdline-tools;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Android\\Sdk\\cmdline-tools\\Latest;C:\\Users\\MUJEEB-UL-HASSAN\\AppData\\Local\\Android\\Sdk\\cmdline-tools\\Latest\\bin;"
+      }
+    }
+  }
+}
